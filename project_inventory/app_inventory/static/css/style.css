@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+
+:root {
+    --mainRed: #A30D0D;
+    --shadowRed: #5D0C0C;
+    --mainBg: #DBD3CA;
+    --shadowBg: #B2A598;
+  }
+
+*{
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Chivo', sans-serif;
+    text-decoration: none;
+}
+
+a{
+    color: inherit;
+}
+
+body{
+    margin: 0;
+    background: var(--shadowBg);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: var(--mainRed);
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 6px 8px 3px rgba(0, 0, 0, 0.25);
+}
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 250px;
+    border-right: 3px solid var(--shadowRed);
+    color: var(--mainBg);
+}
+
+nav .active{
+    background: var(--shadowRed);
+    
+}
+
+main{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topMain{
+    width: 90%;
+}
+
+.topMain div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tableMain{
+    height: min-content;
+    max-height: 600px;
+    overflow: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--mainBg);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.50) inset;
+}
+
+.tableMain table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.tableMain th,td{
+    font-size: 24px !important;
+}
+
+.tableMain th,td{
+    border: 1.5px solid var(--shadowBg)
+}
+
+.tableMain a{
+    font-size: 24px;
+}
+
+.mainBtn{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background: var(--shadowRed);
+    color: var(--mainBg);
+    margin-bottom: 10px;
+}
+
+.formProduct{
+    display: flex;
+    flex-direction: column;
+}
+
+.formProduct * {
+    text-align: start;
+}
+
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.inputForm label{
+    color: #5D0C0C;
+font-size: 32px;
+font-family: Chivo;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.inputForm input{
+    border-radius: 10px;
+background: #DBD3CA;
+box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+height: 50px;
+}
+
+.inputForm select{
+    border-radius: 10px;
+background: #DBD3CA;
+box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+height: 50px;
+}
+
+.dnone{
+    display: none !important;
+}
+
+.overallContent{
+    display: flex;
+    flex-direction: column;
+}

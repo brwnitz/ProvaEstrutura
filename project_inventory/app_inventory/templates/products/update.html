@@ -1,0 +1,25 @@
+{% extends 'products/base.html' %}
+{% block content %}
+
+<div>
+    <div>
+        <span>Quantidade de vendas: </span id="salesSpan">{{product.sales}}</span></span>
+    </div>
+    <span>Quantidade disponível: <span id="quantitySpan">{{product.quantity}}</span></span>
+</div>
+<form method="POST" action="{% url 'update' param=product.id_product %}">
+    {% csrf_token %}
+    <div>
+        <span for="sales">Adicionar Vendas:</span>
+        <input type="number" name="sales" oninput="changeBtn()" id="sales">
+    </div>
+    <div>
+        <span for="quantity">Adicionar Produtos:</span>
+    <input type="number" name="quantity" oninput="changeBtn()" id="quantity">
+    </div> 
+    <div>
+        <button type="submit" id="sendButton" disabled>Update</button>
+    </div>
+  </form>
+
+{% endblock %}

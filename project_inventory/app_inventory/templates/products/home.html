@@ -1,0 +1,39 @@
+{% extends 'products/base.html' %}
+{% block content %}
+        <div class="topMain">
+            <div>
+                <a href="{% url 'register' %}" class="mainBtn">Novo</a>
+            </div>
+        </div>
+        <div class="tableMain">
+            <table>
+              <tr>
+                <th>CÓD</th>
+                <th>QNT</th>
+                <th>NOME DO PRODUTO</th>
+                <th>É PERECÍVEL</th>
+                <th>VALIDADE</th>
+                <th>PREÇO</th>
+                <th style="width: 150px;"></th>
+              </tr>
+              {% for product in products %}
+              <tr>
+                <td>{{product.id_product}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.name}}</td>
+                {% if not product.perishable %}
+                <td>Não</td>
+                <td></td>
+                {% endif %}
+                {% if product.perishable %}
+                <td>Sim</td>
+                <td>{{product.expire_date}}</td>
+                {% endif %}
+                <td>{{product.price}}</td>
+                <td><a href="{% url 'update' param=product.id_product %}">Atualizar Estoque</a></td>                            
+              </tr>
+              {% endfor %}
+            </table>
+        </div>
+
+{% endblock %}

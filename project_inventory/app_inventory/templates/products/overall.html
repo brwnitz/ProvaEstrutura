@@ -1,0 +1,19 @@
+{% extends 'products/base.html' %}
+{% block content %}
+
+    <div class="overallContent">
+        {% if most_sold %}
+        <span>Produto mais Vendido: {{most_sold.name}} com {{most_sold.sales}} vendas</span>
+        {% else %}
+        <span>Não há produto neste requisito.</span>
+        {% endif %}
+        <span>Quantidade total em ganhos: {{total_profit}}</span>
+        <span>Total produtos vendidos: {{total_sales}}</span>
+        {% if most_profit %}
+        <span>Produto mais lucrativo: {{most_profit.name}}</span>
+        {% else %}
+        <span>Não houve produto mais lucrativo.</span>
+        {% endif %}
+    </div>
+
+{% endblock %}
